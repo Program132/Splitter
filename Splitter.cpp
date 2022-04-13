@@ -4,7 +4,7 @@
 #include <sstream>
 #include <vector>
 
-std::vector<std::string> split(std::string arg) {
+std::vector<std::string> split(std::string& arg) {
     std::string myBuffer;
 
     std::vector<std::string> myVec;
@@ -18,19 +18,19 @@ std::vector<std::string> split(std::string arg) {
     return myVec;
 }
 
-std::vector<char> splitChar(std::string arg) {
+std::vector<char> splitChar(std::string& arg) {
     std::istringstream iss(arg);
     std::vector<char> vec((std::istream_iterator<char>(iss)), std::istream_iterator<char>());;
 
     return vec;
 }
 
-std::string toLowerCase(std::string str) {
+std::string toLowerCase(std::string& str) {
     std::transform(str.begin(), str.end(), str.begin(), std::tolower);
     return str;
 }
 
-std::string toUpperCase(std::string str) {
+std::string toUpperCase(std::string& str) {
     std::transform(str.begin(), str.end(), str.begin(), std::toupper);
     return str;
 }
