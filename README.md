@@ -5,6 +5,7 @@ Splitter has three functions :
 - toLowerCase
 - toUpperCase
 - split
+- splitChar
 
 
 You can use these fonctions with string variables.
